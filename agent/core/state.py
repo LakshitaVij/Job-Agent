@@ -5,7 +5,10 @@ import json
 def load_state():
     try:
         with open ('state/state.json', 'r') as file:
-            return json.load(file)
+            content = file.read()
+            if not content:
+                return {}
+            return json.loads(content)
     except FileNotFoundError:
         return {}
 
@@ -13,7 +16,7 @@ def save_state(tool_name, result):
     state = load_state()
     state[tool_name] = result
     with open('state/state.json', 'w') as f:
-        json.dumps(state)
+        json.dump(state, f)
     
 
     
