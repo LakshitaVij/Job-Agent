@@ -18,8 +18,8 @@ def _evaluate(prompt):
     messages = [{"role": "user", "content": prompt}]
     
     response = client.messages.create(
-    model ="claude-sonnet-4-20250514",
-    max_tokens = 1000,
+    model ="claude-haiku-4-5-20251001",
+    max_tokens = 4096,
     messages = messages
     )
     return next(block for block in response.content if block.type == "text").text

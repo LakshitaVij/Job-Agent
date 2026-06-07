@@ -24,8 +24,8 @@ Return a JSON with:
     client = anthropic.Anthropic()
     messages = [{"role": "user", "content": user_message}]
     response = client.messages.create(
-            model ="claude-sonnet-4-20250514",
-            max_tokens = 1000,
+            model ="claude-haiku-4-5-20251001",
+            max_tokens = 4096,
             tools = tools,
             messages = messages
         )
@@ -47,8 +47,8 @@ Return a JSON with:
             )
             save_state(tool_use.name, result)
             response = client.messages.create(
-            model ="claude-sonnet-4-20250514",
-            max_tokens = 1000,
+            model ="claude-haiku-4-5-20251001",
+            max_tokens = 4096,
             tools = tools,
             messages = messages
         )
