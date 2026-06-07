@@ -4,7 +4,7 @@ import os
 os.makedirs('logs', exist_ok=True)
 
 
-def log_tool_call(tool_name, inputs, result, duration, status, timestamp):
+def log_tool_call(tool_name, inputs, result, duration, status):
     os.makedirs('logs', exist_ok=True)
     entry= {
         "tool name": tool_name,
