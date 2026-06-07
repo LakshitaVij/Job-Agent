@@ -1,0 +1,108 @@
+{
+    "name": "Lakshita Vij",
+    "email": "lakshitavij@nyu.edu",
+    "phone": "(424) 407-5852",
+    "linkedin": "https://linkedin.com/in/lakshitavij",
+    "github": "https://github.com/LakshitaVij",
+
+    "education": [
+        {
+            "school": "New York University",
+            "degree": "M.S. in Computer Science",
+            "expected": "December 2026"
+        },
+        {
+            "school": "University of California, Los Angeles",
+            "degree": "B.S. Cognitive Science, B.A. Economics",
+            "minors": ["Computer Science", "Film & Television"],
+            "graduated": "June 2023"
+        }
+    ],
+
+    "experiences": [
+        {
+            "company": "Infosys BPM",
+            "role": "Software Engineering Intern",
+            "duration": "July 2025 - December 2025",
+            "highlights": [
+                "Designed and deployed a scheduled Python ETL pipeline using Playwright to ingest GDP data across 190 countries",
+                "Improved pipeline stability by implementing structured error handling, retry logic, and data validation",
+                "Reduced manual formatting corrections by 70% through standardized country mappings and output schemas"
+            ],
+            "skills": ["Python", "Playwright", "ETL", "Data Pipelines", "Error Handling"]
+        },
+        {
+            "company": "SCAN Lab, IIT Bombay",
+            "role": "Founding Engineer",
+            "duration": "July 2023 - July 2025",
+            "highlights": [
+                "Led development of Neuroscan360 (Provisional Patent: 202521013597), a multimodal clinical screening platform with 25+ interactive assessments and real-time inference at under 100ms latency",
+                "Architected ML infrastructure including multimodal ingestion (camera, audio, sensors), preprocessing, feature extraction, model training, and versioned deployment pipelines",
+                "Built MRI-based Alzheimer's classification module with reproducible evaluation pipelines",
+                "Deployed in 100-participant clinical pilot achieving 95% multi-class classification accuracy"
+            ],
+            "skills": ["ML Infrastructure", "Multimodal Systems", "Clinical AI", "PyTorch", "Real-time Inference", "Patent"]
+        },
+        {
+            "company": "Impetus",
+            "role": "Data Analyst Intern",
+            "duration": "April 2024 - June 2024",
+            "highlights": [
+                "Streamlined data pipelines processing 1M+ records, reducing model training time by 20%",
+                "Conducted EDA on 100K+ records to identify high-impact features and reduce overfitting",
+                "Achieved 94% accuracy and 89.4% F1-score through cross-validation and hyperparameter search"
+            ],
+            "skills": ["Data Pipelines", "EDA", "ML Models", "XGBoost", "Scikit-learn"]
+        }
+    ],
+
+    "projects": [
+        {
+            "name": "Chopra Lab - Research Assistant",
+            "duration": "July 2025 - Present",
+            "highlights": [
+                "Developed HPC-based DICOM-to-HDF5 pipeline on NYU BigPurple cluster for 9.1TB thoracic imaging repository",
+                "Benchmarked end-to-end data loading latency and tuned CPU allocation to reduce I/O overhead",
+                "Standardized CXR/CT imaging workflows for scalable model training"
+            ],
+            "skills": ["HPC", "DICOM", "HDF5", "Medical Imaging", "BigPurple", "SLURM"]
+        },
+        {
+            "name": "Content-Based Movie Recommendation System",
+            "duration": "September 2025",
+            "highlights": [
+                "Architected full-stack recommendation system with embedding-driven ranking using cosine similarity, genre overlap, and cast affinity",
+                "Designed NLP search pipelines using TF-IDF and embedding models with semantic, typo-tolerant retrieval"
+            ],
+            "skills": ["React", "Node.js", "NLP", "TF-IDF", "Embeddings", "Full-stack"]
+        }
+    ],
+
+    "skills": {
+        "languages": ["Python", "TypeScript", "JavaScript", "SQL", "C++", "Bash"],
+        "frameworks": ["Node.js", "Express", "React", "FastAPI", "Flask", "REST APIs"],
+        "infrastructure": ["Docker", "Kubernetes", "Git", "CI/CD", "AWS", "GCP"],
+        "ml": ["PyTorch", "Scikit-learn", "Pandas", "XGBoost", "OpenCV", "MediaPipe"]
+    },
+
+    "strengths": [
+        "Multimodal ML systems",
+        "Clinical AI and medical imaging",
+        "Production ML infrastructure",
+        "Full-stack engineering",
+        "HPC and large-scale data pipelines",
+        "Research to deployment"
+    ],
+
+    "interests": [
+        "Clinical AI",
+        "Neurotech",
+        "Multimodal learning",
+        "Real-time inference systems",
+        "Healthcare ML"
+    ],
+
+    "visa_status": "F-1 (requires sponsorship)",
+
+    "availability": "December 2026 (full-time), immediate (internship)"
+}
