@@ -103,6 +103,34 @@
     ],
 
     "visa_status": "F-1 (requires sponsorship)",
+    "work_authorized": true,
+    "requires_sponsorship": true,
+    "willing_to_relocate": true,
 
-    "availability": "December 2026 (full-time), immediate (internship)"
+    "location": "New York, NY",
+    "country": "United States",
+    "state": "New York",
+    "timezone": "Eastern Time (ET)",
+    "pronouns": "She/Her",
+    "website": null,
+    "resume_path": "/Users/lakshitavij/Downloads/Vij_Lakshita_Feb2026.pdf",
+    "salary_expectation": "150,000",
+    "referral_source": "Web Search",
+
+    "availability": "December 2026 (full-time)",
+    "years_of_experience": {
+        "total": "1-4 years",
+        "react": "1-2 years",
+        "nodejs": "1-2 years"
+    },
+    "fullstack_preference": "Back-end leaning",
+    "demographics": {
+        "gender": "Woman",
+        "race_ethnicity": "South Asian",
+        "sexual_orientation": "Bisexual",
+        "transgender": "No",
+        "disability": "No",
+        "veteran": "No, I am not a veteran"
+    }
+    
 }
