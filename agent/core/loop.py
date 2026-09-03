@@ -1,5 +1,5 @@
 from agent.core.registry import get_tools_for_api, get_tool
-from agent.core.state import load_state, save_state
+from agent.core.state import load_state, save_state, save_messages, load_messages
 from agent.core.executor import execute_tool
 import anthropic
 import json
@@ -9,13 +9,19 @@ from scaffolding.retry import retry_with_backoff
 from scaffolding.rate_limiter import RateLimiter
 
 
+
 def run_agent(user_message: str) -> dict:
     state = load_state()
     client = anthropic.Anthropic()
-    messages = [{"role": "user", "content": user_message}]
+    
+    system_prompt = "You are an autonomous job application agent for Lakshita Vij, an NYU MS Computer Science student graduating December 2026 with a background in Cognitive Science and Economics from UCLA. She has experience in clinical AI, multimodal ML systems, HPC pipelines, and full-stack engineering. She is targeting neurotech, clinical AI, and healthtech roles in NYC. Your job is to find relevant jobs, evaluate fit against her background, research companies, draft personalized outreach, and track applications in Notion. Always fetch her resume first before evaluating anything. Never ask for confirmation before starting. Always proceed immediately with the task. Start by fetching the resume, then execute the full workflow autonomously."
+    
+    messages = load_messages()
+    messages.append({"role": "user", "content": user_message})
     response = client.messages.create(
         model="claude-haiku-4-5-20251001",
         max_tokens=4096,
+        system=system_prompt,
         tools=get_tools_for_api(),
         messages=messages
     )
@@ -44,14 +50,15 @@ def run_agent(user_message: str) -> dict:
                 "content": json.dumps(result)
             })
             save_state(tool_use.name, result)
-
+        
         messages.append({"role": "user", "content": tool_results})
 
         response = client.messages.create(
             model="claude-haiku-4-5-20251001",
             max_tokens=4096,
             tools=get_tools_for_api(),
+            system=system_prompt,
             messages=messages
         )
-
+    save_messages(messages)
     return next(block for block in response.content if block.type == "text").text

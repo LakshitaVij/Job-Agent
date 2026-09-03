@@ -54,6 +54,18 @@ def evaluate_relevant_experiences(job_description, resume):
     - suggested_order: which to lead with
     """
     return _evaluate(prompt)
+def emotional_comfort(resume):
+    prompt = f"""
+    You are a career coach and advisor with over 30-40 years of experience. Analyse my resume and tell me why I am a good candidate, what makes me strong, what is marketable skills and what are my gaps.
+    If I give you a timeframe within which I want to land a job also highlight how realistic it is and what kinds of jobs can I get or opportunities I can build.
+    In terms of public visibility what kinds of substacks I should write
+    
+    Resume: {resume}
+    
+    Return JSON with:
+    -reasoning: 2-4 paragraphs on emotional comfort, 2-4 paragraphs on the rest of the pointers
+    """
+    return _evaluate(prompt)
 
 def evaluate_red_flags(job_description, glassdoor_data, company_data):
     prompt = f"""

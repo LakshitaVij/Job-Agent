@@ -199,6 +199,18 @@ TOOL_REGISTRY = [
             "required": ["trajectory_data", "candidate_background"]
         }
     },
+   {
+    "name": "emotional_comfort",
+    "namespace": "evaluate",
+    "description": "Analyse the candidate's resume and provide emotional comfort — what makes them strong, what's marketable, what are the gaps, and what opportunities they can realistically pursue",
+    "input_schema": {
+        "type": "object",
+        "properties": {
+            "resume": {"type": "object", "description": "output from fetch_my_resume"}
+        },
+        "required": ["resume"]
+    }
+},
     {
         "name": "evaluate_resume_fit",
         "namespace": "evaluate",

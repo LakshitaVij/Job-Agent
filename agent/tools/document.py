@@ -35,7 +35,7 @@ def create_application_record(company_name, role, confirmation_data=None, key_co
         "properties": {
             "Company": {"title": [{"text": {"content": company_name}}]},
             "Role": {"rich_text": [{"text": {"content": role}}]},
-            "Status": {"select": {"name": "applied"}}
+            "Status": {"status": {"name": "Not started"}}
         }
     }
     return _notion_request("POST", "/pages", data)

@@ -36,6 +36,7 @@ def send_email(to, subject, body, thread_id=None):
     if thread_id:
         body['threadId'] = thread_id
     service.users().messages().send(userId='me', body=body).execute() # actually sends it through Gmail
+    return service.users().messages().send(userId='me', body=body).execute()
 
 
 def draft_cold_email(recipient, relevant_experiences, candidate_background, job_description, build_opportunities=None, tone=None):
